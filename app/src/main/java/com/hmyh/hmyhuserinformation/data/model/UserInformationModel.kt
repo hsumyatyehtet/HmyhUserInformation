@@ -12,4 +12,6 @@ interface UserInformationModel {
 
     fun getUserList(): LiveData<List<UserListVO>>
 
+    fun getUserByUserId(userId: Int): LiveData<UserListVO>
+
 }

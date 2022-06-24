@@ -44,4 +44,8 @@ object UserInformationModelImpl : BaseAppModel(), UserInformationModel {
         return mDatabase.userListDao().getUserList()
     }
 
+    override fun getUserByUserId(userId: Int): LiveData<UserListVO> {
+        return mDatabase.userListDao().getUserByUserId(userId)
+    }
+
 }
