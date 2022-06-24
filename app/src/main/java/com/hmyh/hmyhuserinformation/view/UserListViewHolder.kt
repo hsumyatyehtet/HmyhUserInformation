@@ -7,14 +7,17 @@ import com.hmyh.hmyhuserinformation.databinding.ViewHolderInUserListBinding
 
 class UserListViewHolder(
     private val binding: ViewHolderInUserListBinding,
-    private val delegate: UserListAdapter.Delegate
+    val delegate: UserListAdapter.Delegate
 )
     : BaseViewHolder<UserListVO>(binding.root) {
 
     init {
-        itemView.setOnClickListener {
-            mData?.id?.let { userId->
-                delegate.onTapUserItem(userId)
+        binding.cvUserListContainer.setOnClickListener {
+            mData?.let { mData->
+                mData.id?.let { id->
+                    delegate.onTapUserItem(id)
+                }
+
             }
         }
     }
@@ -23,7 +26,7 @@ class UserListViewHolder(
         mData = data
 
         binding.tvNameItem.text = "${data.name} ( @${data.useName} )"
-        binding.tvUserNameItem.text = "@${data.useName}"
+        binding.tvPhoneItem.text = data.phone ?: ""
         binding.tvEmailItem.text = data.email ?: ""
     }
 
