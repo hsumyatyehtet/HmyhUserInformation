@@ -7,7 +7,7 @@ import com.hmyh.hmyhuserinformation.adapter.UserListAdapter
 import com.hmyh.hmyhuserinformation.databinding.ActivityMainBinding
 import com.hmyh.hmyhuserinformation.utils.getUserList
 
-class MainActivity : BaseActivity() {
+class MainActivity : BaseActivity(),UserListAdapter.Delegate {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var mUserListAdapter: UserListAdapter
@@ -23,7 +23,7 @@ class MainActivity : BaseActivity() {
     }
 
     private fun setUpRecyclerView() {
-        mUserListAdapter = UserListAdapter()
+        mUserListAdapter = UserListAdapter(this)
         binding.rvUserList.layoutManager =
             LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
         binding.rvUserList.adapter = mUserListAdapter
@@ -31,6 +31,10 @@ class MainActivity : BaseActivity() {
 
     private fun setUpDataObservations() {
         mUserListAdapter.setNewData(getUserList())
+    }
+
+    override fun onTapUserItem(userId: Int) {
+        startActivity(UserDetailActivity.newIntent(this,userId))
     }
 
 }

@@ -18,13 +18,19 @@
         <activity
             android:name=".activity.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.HmyhUserInformation.NoActionBar">
+            android:theme="@style/Theme.HmyhUserInformation.NoActionBar"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".activity.UserDetailActivity"
+            android:theme="@style/Theme.HmyhUserInformation.NoActionBar"
+            android:screenOrientation="portrait"/>
+
     </application>
 
 </manifest>
