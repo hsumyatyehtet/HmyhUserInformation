@@ -4,6 +4,7 @@ import android.content.Context
 import com.google.gson.GsonBuilder
 import com.hmyh.hmyhuserinformation.BuildConfig
 import com.hmyh.hmyhuserinformation.netwrok.UserInformationApi
+import com.hmyh.hmyhuserinformation.persistance.UserListDatabase
 import com.hmyh.hmyhuserinformation.utils.ApiConstants
 import com.hmyh.hmyhuserinformation.utils.BASE_URL
 import com.readystatesoftware.chuck.ChuckInterceptor
@@ -19,7 +20,7 @@ import java.util.concurrent.TimeUnit
 abstract class BaseAppModel: BaseModel() {
 
    protected lateinit var mApi: UserInformationApi
-//    protected lateinit var mDatabase: HmyhAssignmentThreeDatabase
+    protected lateinit var mDatabase: UserListDatabase
 
     override fun init(context: Context) {
         initNetwork(context)
@@ -27,7 +28,7 @@ abstract class BaseAppModel: BaseModel() {
     }
 
     private fun initDatabase(context: Context) {
-        //mDatabase = HmyhAssignmentThreeDatabase.getDatabase(context)
+        mDatabase = UserListDatabase.getDatabase(context)
     }
 
     private fun initNetwork(context: Context) {

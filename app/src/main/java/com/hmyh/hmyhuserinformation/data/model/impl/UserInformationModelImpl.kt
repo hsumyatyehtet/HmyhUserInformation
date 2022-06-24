@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import com.hmyh.hmyhuserinformation.data.model.BaseAppModel
 import com.hmyh.hmyhuserinformation.data.model.UserInformationModel
 import com.hmyh.hmyhuserinformation.data.vos.UserListVO
+import com.hmyh.hmyhuserinformation.utils.subscribeDBWithCompletable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import kotlinx.coroutines.GlobalScope
@@ -26,16 +27,21 @@ object UserInformationModelImpl : BaseAppModel(), UserInformationModel {
         )
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
-                it?.let { userVO ->
+                it?.let { userList ->
                     GlobalScope.launch {
-                        liveData.postValue(userVO)
+                        liveData.postValue(userList)
                     }
-                    onSuccess(userVO)
+                    onSuccess(userList)
+                    mDatabase.userListDao().insertUserList(userList).subscribeDBWithCompletable()
                 }
             }, {
                 onFailure(it.toString())
             })
         return liveData
+    }
+
+    override fun getUserList(): LiveData<List<UserListVO>> {
+        return mDatabase.userListDao().getUserList()
     }
 
 }

@@ -14,21 +14,18 @@ class UserListViewModel : ViewModel(),UserListAdapter.Delegate {
 
     private val mModel: UserInformationModel = UserInformationModelImpl
 
-    private var mUserList: MutableLiveData<List<UserListVO>> = MutableLiveData()
+    private var mUserList: LiveData<List<UserListVO>> = mModel.getUserList()
+
     private var mErrorMessage: MutableLiveData<String> = MutableLiveData<String>()
 
     private var navigateToDetail: MutableLiveData<Int> = MutableLiveData()
 
     fun onUiReady() {
         mModel.loadUserList(
-            onSuccess = { userList ->
-                GlobalScope.launch {
-                    mUserList.postValue(userList)
-                }
-            },
+            onSuccess = {},
             onFailure = {
                 GlobalScope.launch {
-                    mErrorMessage.postValue(it.toString())
+                    mErrorMessage.postValue(it)
                 }
             })
     }

@@ -10,4 +10,6 @@ interface UserInformationModel {
         onFailure: (String)->Unit
     ): LiveData<List<UserListVO>>
 
+    fun getUserList(): LiveData<List<UserListVO>>
+
 }
