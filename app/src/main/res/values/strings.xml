@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Hmyh UserInformation</string>
+<!--    <string name="app_name">Hmyh UserInformation</string>-->
+
+<!--    <string name="app_name_stag">UserListHmyh (Stag)</string>-->
+<!--    <string name="app_name_prod">UserListHmyh (Prod)</string>-->
+
 </resources>

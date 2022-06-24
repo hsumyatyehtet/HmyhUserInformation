@@ -1,6 +1,6 @@
 package com.hmyh.hmyhuserinformation.utils
 
-const val BASE_URL="https://jsonplaceholder.typicode.com"
+//const val BASE_URL="https://jsonplaceholder.typicode.com"
 
 //api
 const val GET_ALL_USER_LIST="/users"
