@@ -29,10 +29,17 @@ class UserDetailActivity: BaseActivity() {
 
         getDataFromIntent()
         setUpData()
+        setUpListener()
+    }
+
+    private fun setUpListener() {
+        binding.ivBackDetail.setOnClickListener {
+            finish()
+        }
     }
 
     private fun setUpData() {
-        binding.tvUserId.text = userId.toString()
+
     }
 
     private fun getDataFromIntent() {
