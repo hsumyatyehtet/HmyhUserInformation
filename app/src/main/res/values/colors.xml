@@ -24,4 +24,36 @@
     <color name="colorGrey800">#424242</color>
     <color name="colorGrey900">#212121</color>
 
+    <color name="colorLightBlue50">#E1F5FE</color>
+    <color name="colorLightBlue100">#B3E5FC</color>
+    <color name="colorLightBlue200">#81D4FA</color>
+    <color name="colorLightBLue300">#4FC3F7</color>
+    <color name="colorLightBLue400">#29B6F6</color>
+    <color name="colorLightBlue500">#03A9F4</color>
+    <color name="colorLightBlue600">#039BE5</color>
+    <color name="colorLightBlue700">#0288D1</color>
+    <color name="colorLightBlue800">#0277BD</color>
+    <color name="colorLightBlue900">#01579B</color>
+    <color name="colorLightBlueA100">#80D8FF</color>
+    <color name="colorLightBlueA200">#40C4FF</color>
+    <color name="colorLightBlueA400">#00B0FF</color>
+    <color name="colorLightBlueA700">#0091EA</color>
+
+    <color name="colorRed50">#FFEBEE</color>
+    <color name="colorRed100">#FFCDD2</color>
+    <color name="colorRed200">#EF9A9A</color>
+    <color name="colorRed300">#E57373</color>
+    <color name="colorRed400">#EF5350</color>
+    <color name="colorRed500">#F44336</color>
+    <color name="colorRed600">#E53935</color>
+    <color name="colorRed700">#D32F2F</color>
+    <color name="colorRed800">#C62828</color>
+    <color name="colorRed900">#B71C1C</color>
+    <color name="colorRedA100">#FF8A80</color>
+    <color name="colorRedA200">#FF5252</color>
+    <color name="colorRedA400">#FF1744</color>
+    <color name="colorRedA700">#D50000</color>
+
+
+
 </resources>

@@ -39,6 +39,7 @@ android {
             manifestPlaceholders = [appName: "@string/app_name_stag"]
             buildConfigField "String", BASE_URL_FIELD, BASE_URL_STAG
             resValue("string", APP_LABEL, LABEL_STAG)
+            manifestPlaceholders = [appTheme: "@style/AppTheme.Staging"]
         }
 
         prod{
@@ -47,6 +48,7 @@ android {
             manifestPlaceholders = [appName: "@string/app_name_prod"]
             buildConfigField "String", BASE_URL_FIELD, BASE_URL_PROD
             resValue("string", APP_LABEL, LABEL_PROD)
+            manifestPlaceholders = [appTheme: "@style/AppTheme.Prod"]
         }
 
     }

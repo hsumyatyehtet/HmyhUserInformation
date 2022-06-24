@@ -1,9 +1,12 @@
 package com.hmyh.hmyhuserinformation.activity
 
 import android.os.Bundle
+import androidx.compose.ui.graphics.Color
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.hmyh.hmyhuserinformation.BuildConfig
 import com.hmyh.hmyhuserinformation.adapter.UserListAdapter
 import com.hmyh.hmyhuserinformation.data.vos.UserListVO
 import com.hmyh.hmyhuserinformation.databinding.ActivityMainBinding
