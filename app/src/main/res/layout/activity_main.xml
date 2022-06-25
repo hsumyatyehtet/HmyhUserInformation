@@ -12,6 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_medium"
-        android:layout_marginVertical="@dimen/margin_medium_2"/>
+        android:layout_marginTop="@dimen/margin_medium_2"/>
 
 </RelativeLayout>

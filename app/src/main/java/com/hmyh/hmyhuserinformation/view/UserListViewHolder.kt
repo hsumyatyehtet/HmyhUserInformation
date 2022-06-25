@@ -26,7 +26,6 @@ class UserListViewHolder(
         mData = data
 
         binding.tvNameItem.text = "${data.name} ( @${data.useName} )"
-        binding.tvPhoneItem.text = data.phone ?: ""
         binding.tvEmailItem.text = data.email ?: ""
     }
 
