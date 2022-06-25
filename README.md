@@ -12,6 +12,7 @@ User information show User list screen and User detail screen.
 * Design refrence from google
 * ProductFlavours use for Staging app and Production app
 * Theme different by Staging and Production
+* Icon resources from Flaticon
 
 
 ![Screenshot_2022-06-25-12-25-13-722_com miui home](https://user-images.githubusercontent.com/53394999/175760771-b86621ab-af20-45bc-8418-cb69ccd6208b.jpg)
