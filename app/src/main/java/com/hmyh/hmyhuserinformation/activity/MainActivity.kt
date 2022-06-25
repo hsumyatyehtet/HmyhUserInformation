@@ -6,6 +6,7 @@ import android.os.Looper
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.view.View
 import android.view.WindowManager
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
@@ -85,7 +86,17 @@ class MainActivity : BaseActivity() {
     private fun onChangeTextAfterSecond(searchWord: String) {
         viewModel.loadSearch(searchWord).observe(this, Observer {
             it?.let { userList->
-                mUserListAdapter.setNewData(userList as MutableList<UserListVO>)
+
+                if (userList.isNullOrEmpty()){
+                    binding.ivNoSearch.visibility = View.VISIBLE
+                    binding.rvUserList.visibility = View.GONE
+                }
+                else{
+                    binding.ivNoSearch.visibility = View.GONE
+                    binding.rvUserList.visibility = View.VISIBLE
+                    mUserListAdapter.setNewData(userList as MutableList<UserListVO>)
+                }
+
             }
         })
     }
