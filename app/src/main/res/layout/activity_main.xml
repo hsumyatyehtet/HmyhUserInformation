@@ -2,15 +2,95 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlMainContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorGrey900">
+    android:background="?attr/colorPrimary">
+
+    <TextView
+        android:id="@+id/tvUserList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:text="User List"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_3x"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/rlToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tvUserList"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:background="@drawable/bg_search_bar"
+        android:layout_toStartOf="@+id/rlUserListRefresh">
+
+        <ImageView
+            android:id="@+id/ivNewsSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:src="@drawable/ic_twotone_search"
+            android:tint="@color/black"
+            tools:ignore="UseAppTint" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etUserSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_toEndOf="@+id/ivNewsSearch"
+            android:background="@null"
+            android:hint="Search by name"
+            android:lines="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/colorGrey600"
+            android:textSize="@dimen/text_small" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlUserListRefresh"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tvUserList"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:background="@drawable/bg_search_bar">
+
+        <ImageView
+            android:id="@+id/ivUserListRefresh"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_baseline_refresh" />
+
+    </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvUserList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/rlToolBar"
         android:layout_marginHorizontal="@dimen/margin_medium"
-        android:layout_marginVertical="@dimen/margin_medium_2"/>
+        android:layout_marginTop="@dimen/margin_medium_2" />
+
+    <ImageView
+        android:id="@+id/ivNoSearch"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:visibility="gone"
+        android:src="@drawable/no_search"
+        android:layout_centerInParent="true"/>
 
 </RelativeLayout>

@@ -20,6 +20,32 @@
 
     </style>
 
+    <style name="AppTheme.Staging" parent="Theme.HmyhUserInformation.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorLightBlue900</item>
+        <item name="colorPrimaryVariant">@color/colorLightBlue900</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorLightBlue200</item>
+        <item name="colorSecondaryVariant">@color/colorLightBlue700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+    </style>
+
+    <style name="AppTheme.Prod" parent="Theme.HmyhUserInformation.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorRed900</item>
+        <item name="colorPrimaryVariant">@color/colorRed900</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorRed200</item>
+        <item name="colorSecondaryVariant">@color/colorRed700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <solid android:color="@color/black"/>
+    <solid android:color="@color/colorGrey50"/>
 
     <corners
         android:topRightRadius="@dimen/margin_large"

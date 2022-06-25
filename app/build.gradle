@@ -21,6 +21,43 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    productFlavors {
+
+        def BASE_URL_FIELD = "GRADLE_BASE_URL"
+        def BASE_URL_STAG = "\"https://jsonplaceholder.typicode.com\""
+        def BASE_URL_PROD = "\"https://jsonplaceholder.typicode.com\""
+
+        def APP_LABEL = "app_name"
+        def LABEL_STAG = "UserListHmyh (Stag)"
+        def LABEL_PROD = "UserListHmyh"
+
+        flavorDimensions "userlist-flavor"
+
+        stag {
+            dimension = "userlist-flavor"
+            applicationIdSuffix = ".stag"
+            manifestPlaceholders = [appName: "@string/app_name_stag"]
+            buildConfigField "String", BASE_URL_FIELD, BASE_URL_STAG
+            resValue("string", APP_LABEL, LABEL_STAG)
+            manifestPlaceholders = [appTheme    : "@style/AppTheme.Staging",
+                                    appIcon     : "@drawable/app_icon_staging",
+                                    appIconRound: "@drawable/app_icon_staging"]
+
+        }
+
+        prod {
+            dimension = "userlist-flavor"
+            applicationIdSuffix = ".prod"
+            manifestPlaceholders = [appName: "@string/app_name_prod"]
+            buildConfigField "String", BASE_URL_FIELD, BASE_URL_PROD
+            resValue("string", APP_LABEL, LABEL_PROD)
+            manifestPlaceholders = [appTheme    : "@style/AppTheme.Prod",
+                                    appIcon     : "@drawable/app_icon_prod",
+                                    appIconRound: "@drawable/app_icon_prod"]
+        }
+
+    }
+
     buildTypes {
         release {
             minifyEnabled false

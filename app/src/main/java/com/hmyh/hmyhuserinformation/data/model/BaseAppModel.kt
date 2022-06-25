@@ -6,7 +6,6 @@ import com.hmyh.hmyhuserinformation.BuildConfig
 import com.hmyh.hmyhuserinformation.netwrok.UserInformationApi
 import com.hmyh.hmyhuserinformation.persistance.UserListDatabase
 import com.hmyh.hmyhuserinformation.utils.ApiConstants
-import com.hmyh.hmyhuserinformation.utils.BASE_URL
 import com.readystatesoftware.chuck.ChuckInterceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -50,7 +49,7 @@ abstract class BaseAppModel: BaseModel() {
             .build()
 
         val retrofit = Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(BuildConfig.GRADLE_BASE_URL)
             .addConverterFactory(GsonConverterFactory.create(GsonBuilder().setLenient().create()))
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .client(okHttpClient)
