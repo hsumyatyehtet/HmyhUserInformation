@@ -21,11 +21,13 @@
     <RelativeLayout
         android:id="@+id/rlToolBar"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="40dp"
         android:layout_below="@+id/tvUserList"
-        android:layout_marginHorizontal="@dimen/margin_medium_2"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_medium"
         android:layout_marginTop="@dimen/margin_medium"
-        android:background="@drawable/bg_search_bar">
+        android:background="@drawable/bg_search_bar"
+        android:layout_toStartOf="@+id/rlUserListRefresh">
 
         <ImageView
             android:id="@+id/ivNewsSearch"
@@ -53,6 +55,25 @@
             android:textColor="@color/black"
             android:textColorHint="@color/colorGrey600"
             android:textSize="@dimen/text_small" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlUserListRefresh"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/tvUserList"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:background="@drawable/bg_search_bar">
+
+        <ImageView
+            android:id="@+id/ivUserListRefresh"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_baseline_refresh" />
 
     </RelativeLayout>
 

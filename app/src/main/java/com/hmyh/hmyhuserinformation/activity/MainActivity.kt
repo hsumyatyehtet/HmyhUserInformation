@@ -7,12 +7,15 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.WindowManager
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import androidx.compose.ui.graphics.Color
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.hmyh.hmyhuserinformation.BuildConfig
+import com.hmyh.hmyhuserinformation.R
 import com.hmyh.hmyhuserinformation.adapter.UserListAdapter
 import com.hmyh.hmyhuserinformation.data.vos.UserListVO
 import com.hmyh.hmyhuserinformation.databinding.ActivityMainBinding
@@ -58,22 +61,31 @@ class MainActivity : BaseActivity() {
                 }, 600)
             }
 
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
-            }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-
-            }
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
 
         })
+
+        binding.rlUserListRefresh.setOnClickListener {
+            val aniRotate: Animation = AnimationUtils.loadAnimation(this, R.anim.clock_wise)
+            binding.ivUserListRefresh.startAnimation(aniRotate)
+
+            binding.etUserSearch.text?.clear()
+
+            viewModel.getUserList().observe(this, Observer {
+                it?.let { userList ->
+                    mUserListAdapter.setNewData(userList as MutableList<UserListVO>)
+                }
+            })
+        }
+
     }
 
     private fun onChangeTextAfterSecond(searchWord: String) {
         viewModel.loadSearch(searchWord).observe(this, Observer {
             it?.let { userList->
                 mUserListAdapter.setNewData(userList as MutableList<UserListVO>)
-                Log.d("searchUser",userList.toString())
             }
         })
     }
