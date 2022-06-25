@@ -30,6 +30,10 @@ class UserListViewModel : ViewModel(),UserListAdapter.Delegate {
             })
     }
 
+    fun loadSearch(searchWord: String): LiveData<List<UserListVO>>{
+        return mModel.loadSearch(searchWord)
+    }
+
     fun getUserList(): LiveData<List<UserListVO>>{
         return mUserList
     }

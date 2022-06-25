@@ -48,4 +48,8 @@ object UserInformationModelImpl : BaseAppModel(), UserInformationModel {
         return mDatabase.userListDao().getUserByUserId(userId)
     }
 
+    override fun loadSearch(searchWord: String): LiveData<List<UserListVO>> {
+        return mDatabase.userListDao().retrieveUserListBySearch("%$searchWord%")
+    }
+
 }

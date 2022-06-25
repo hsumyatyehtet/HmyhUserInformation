@@ -20,4 +20,7 @@ interface UserListDao {
     @Query("select * from user_list where id =:userId")
     fun getUserByUserId(userId: Int): LiveData<UserListVO>
 
+    @Query("select * from user_list where name like :searchWord")
+    fun retrieveUserListBySearch(searchWord: String): LiveData<List<UserListVO>>
+
 }

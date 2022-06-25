@@ -14,4 +14,6 @@ interface UserInformationModel {
 
     fun getUserByUserId(userId: Int): LiveData<UserListVO>
 
+    fun loadSearch(searchWord: String): LiveData<List<UserListVO>>
+
 }
