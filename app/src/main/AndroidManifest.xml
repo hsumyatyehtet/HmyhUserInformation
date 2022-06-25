@@ -31,7 +31,7 @@
         </activity>
 
         <activity android:name=".activity.UserDetailActivity"
-            android:theme="@style/Theme.HmyhUserInformation.NoActionBar"
+            android:theme="${appTheme}"
             android:screenOrientation="portrait"/>
 
     </application>
