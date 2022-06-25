@@ -4,10 +4,10 @@ User information show User list screen and User detail screen.
 ### Technical Features
 
 * Android for App Development
-* Kotlin language use
+* Kotlin language
 * MVVM for App architecture
 * Retrofit for HTTP Networking
-* Room Database use for local database
+* Room database use for local database
 * API request use from Userlist Api
 * Design refrence from google
 * ProductFlavours use for Staging app and Production app
