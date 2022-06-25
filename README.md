@@ -1,5 +1,5 @@
 # HmyhUserInformation
-User Information Show with list and detail screen
+User information show User list screen and User detail screen.
 
 ### Technical Features
 
