@@ -1,6 +1,14 @@
 # HmyhUserInformation
 User information show User list screen and User detail screen.
 
+### App Fetures
+
+ * User List show user data
+ * User detail screen show user data detail
+ * Search by name
+ * Theme, App icon, App name different by staging server and production server
+ * Red for production server and Blue for production server
+
 ### Technical Features
 
 * Android for App Development
@@ -13,6 +21,16 @@ User information show User list screen and User detail screen.
 * ProductFlavours use for Staging app and Production app
 * Theme different by Staging and Production
 * Icon resources from Flaticon
+
+
+## Staging app
+
+<img width="1080" alt="UserList Staging" src="https://user-images.githubusercontent.com/53394999/183258728-3e27712a-6cab-4f22-b175-f683e2343bbe.png">
+
+## Production app
+
+<img width="1080" alt="UserList" src="https://user-images.githubusercontent.com/53394999/183258738-de95648f-5a74-4465-ac4a-13b089147e3d.png">
+
 
 
 ![Screenshot_2022-06-25-12-25-13-722_com miui home](https://user-images.githubusercontent.com/53394999/175760771-b86621ab-af20-45bc-8418-cb69ccd6208b.jpg)
