@@ -7,7 +7,7 @@ User information show User list screen and User detail screen.
  * User detail screen show user data detail
  * Search by name
  * Theme, App icon, App name different by staging server and production server
- * Red for production server and Blue for production server
+ * Red for production server and Blue for staging server
 
 ### Technical Features
 
