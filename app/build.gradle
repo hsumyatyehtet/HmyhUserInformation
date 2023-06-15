@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'maven-publish'
+    id 'com.google.gms.google-services'
 }
 
 apply plugin: 'kotlin-android-extensions'
@@ -143,4 +144,9 @@ dependencies {
 
     //progress
     implementation "com.kaopiz:kprogresshud:1.2.0"
+
+    //firebase
+    implementation platform('com.google.firebase:firebase-bom:32.1.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
 }
