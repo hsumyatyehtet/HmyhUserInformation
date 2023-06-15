@@ -78,6 +78,43 @@
           ]
         }
       }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859649327561:android:7082ea175bab421acae818",
+        "android_client_info": {
+          "package_name": "com.hmyh.hmyhuserinformation.stag"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859649327561-d9ciq3b2022ao6n2n2oe9itcnkhn2qa8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hmyh.hmyhuserinformation.stag",
+            "certificate_hash": "79f291c0bf9932b2ecb79dc724e6d994c8816b6b"
+          }
+        },
+        {
+          "client_id": "859649327561-2i38rcs1bpr8n9c25m76upcim5sc23tn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmBiE1QJzR1_lpgVWkLrG9IIEdQvZFzo8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "859649327561-2i38rcs1bpr8n9c25m76upcim5sc23tn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
   "configuration_version": "1"
