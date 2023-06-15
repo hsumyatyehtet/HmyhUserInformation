@@ -21,6 +21,7 @@ User information show User list screen and User detail screen.
 * ProductFlavours use for Staging app and Production app
 * Theme different by Staging and Production
 * Icon resources from Flaticon
+* CI/CD for Android with Github Actions
 
 
 ### Staging app
