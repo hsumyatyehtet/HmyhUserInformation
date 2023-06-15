@@ -73,10 +73,10 @@ jobs:
       - name: upload artifact to Firebase App Distribution
         uses: wzieba/Firebase-Distribution-Github-Action@v1.2.2
         with:
-          appId: '1:859649327561:android:7467b1a6f2f1ffbacae818'
+          appId: '1:859649327561:android:834bc52a18111e38cae818'
           token: '1//0gYztBmaQpQSpCgYIARAAGBASNwF-L9Irmc6CMCdR5-Ioj79jH4qmovFCEGsQDkRWdC62nNdAlDok1hTLnImbgqowh83HQ6dcvCM'
           groups: testers
-          file: app/build/outputs/apk/stag/debug/app-stag-debug.apk
+          file: app/build/outputs/apk/prod/debug/app-prod-debug.apk
 
   apk:
     name: Generate APK
@@ -94,5 +94,5 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: app
-          path: app/build/outputs/apk/stag/debug/app-stag-debug.apk
+          path: app/build/outputs/apk/prod/debug/app-prod-debug.apk
 
